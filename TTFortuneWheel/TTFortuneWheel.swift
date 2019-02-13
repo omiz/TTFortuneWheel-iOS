@@ -24,7 +24,7 @@ public class TTFortuneWheel: UIControl, CAAnimationDelegate, SpinningAnimatorPro
     /// The sliced centerd to this offset will be 0 indexed one
     open var initialDrawingOffset:CGFloat = 0.0
     
-    lazy private var animator:SpinningWheelAnimator = SpinningWheelAnimator(withObjectToAnimate: self)
+    lazy private var animator: SpinningWheelAnimator = SpinningWheelAnimator(withObjectToAnimate: self)
     private(set) var sliceDegree:CGFloat?
     private(set) var wheelLayer:FortuneWheelLayer!
 

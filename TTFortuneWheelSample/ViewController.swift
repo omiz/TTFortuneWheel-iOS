@@ -10,11 +10,13 @@ import UIKit
 import TTFortuneWheel
 
 class ViewController: UIViewController {
+
+    @IBOutlet weak var spinButton: UIButton!
+    @IBOutlet weak var spinningWheel: TTFortuneWheel!
     
     var got100 = false
     var slices = [CarnivalWheelSlice]()
-
-    @IBOutlet weak var spinningWheel: TTFortuneWheel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         slices = [ CarnivalWheelSlice.init(title: "  50$"),
@@ -56,6 +58,8 @@ class ViewController: UIViewController {
         let count = spinningWheel.slices.count
 
         spinningWheel.startAnimating()
+        spinButton.isEnabled = false
+        
         DispatchQueue.main.asyncAfter(deadline: .now() + 4.0) {
             var finish = Int.random(in: 0..<count)
             
@@ -69,6 +73,7 @@ class ViewController: UIViewController {
                 }
                 print("\n\nfinish = \(finish)")
                 print(self.spinningWheel.slices[finish].title)
+                self.spinButton.isEnabled = true
             }
         }
     }
