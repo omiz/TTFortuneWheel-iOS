@@ -14,14 +14,14 @@ class ViewController: UIViewController {
     @IBOutlet weak var spinningWheel: TTFortuneWheel!
     override func viewDidLoad() {
         super.viewDidLoad()
-        let slices = [ CarnivalWheelSlice.init(title: "Roller Coaster"),
-                       CarnivalWheelSlice.init(title: "Try again"),
-                       CarnivalWheelSlice.init(title: "Free\nticket"),
-                       CarnivalWheelSlice.init(title: "Teddy\nbear"),
-                       CarnivalWheelSlice.init(title: "Large popcorn"),
-                       CarnivalWheelSlice.init(title: "Balloon figures"),
-                       CarnivalWheelSlice.init(title: "Ferris Wheel"),
-                       CarnivalWheelSlice.init(title: "Pony\nRide")]
+        let slices = [ CarnivalWheelSlice.init(title: "  10$"),
+                       CarnivalWheelSlice.init(title: "  10$"),
+                       CarnivalWheelSlice.init(title: "  20$"),
+                       CarnivalWheelSlice.init(title: "  20$"),
+                       CarnivalWheelSlice.init(title: "  20$"),
+                       CarnivalWheelSlice.init(title: "  20$"),
+                       CarnivalWheelSlice.init(title: "  50$"),
+                       CarnivalWheelSlice.init(title: "  100$")]
         spinningWheel.slices = slices
         spinningWheel.equalSlices = true
         spinningWheel.frameStroke.width = 0
